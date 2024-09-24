@@ -1,6 +1,6 @@
 SubProceso aleat = Numeroalt
 	Definir aleat Como Entero;
-	aleat <- azar(11)+1;
+	aleat = azar(11)+1;
 FinSubProceso
 
 SubProceso playerturn(n,msd1)
@@ -11,7 +11,7 @@ SubProceso playerturn(n,msd1)
 			Escribir 'Desea otra carta (s/n)';
 			Leer respuesta;
 			Si respuesta='s' Entonces
-				msd1 <- msd1+Numeroalt;
+				msd1 = msd1+Numeroalt;
 				Escribir 'Ahora sus cartas son ;',msd1;
 			SiNo
 				machineturn(msd1);
@@ -28,9 +28,9 @@ FinSubProceso
 
 SubProceso machineturn(msd1)
 	Definir maquina Como Entero;
-	maquina <- 0;
+	maquina = 0;
 	Escribir 'turno maquina';
-	maquina <- Numeroalt+maquina;
+	maquina = Numeroalt+maquina;
 	Si maquina<msd1 Entonces
 		Escribir 'Ganaste , la maquina tenia ; ',maquina;
 	SiNo
@@ -47,8 +47,8 @@ Proceso siu
 	Definir doce Como Caracter;
 	Repetir
 		Escribir 'Bienvenido a Blackjack';
-		n <- 0;
-		maquina <- 0;
+		n = 0;
+		maquina = 0;
 		Escribir 'El jugador tiene ;',n;
 		Escribir 'La maquina tiene ;',maquina;
 		msd1 <- Numeroalt+n;
